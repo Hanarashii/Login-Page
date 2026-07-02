@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Login</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<main class="page">
+		<section class="hero" aria-hidden="true">
+			<p class="hero-kicker">Secure Access</p>
+			<h1>Welcome Back</h1>
+			<p class="hero-text">
+				Sign in to continue where you left off. Your dashboard and settings are waiting.
+			</p>
+		</section>
+
+		<section class="card-wrap">
+			<article class="login-card" aria-labelledby="login-title">
+				<h2 id="login-title">Login</h2>
+				<p class="subtitle">Use your account details to sign in.</p>
+
+				<form id="loginForm" novalidate>
+					<label for="email">Email Address</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="you@example.com"
+						autocomplete="email"
+						required
+					/>
+
+					<label for="password">Password</label>
+					<div class="password-group">
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Enter your password"
+							autocomplete="current-password"
+							required
+							minlength="6"
+						/>
+						<button type="button" id="togglePassword" aria-label="Show password">Show</button>
+					</div>
+
+					<div class="row">
+						<label class="checkbox">
+							<input type="checkbox" id="remember" name="remember" />
+							<span>Remember me</span>
+						</label>
+						<a class="link" href="../forgot-password/index.html">Forgot password?</a>
+					</div>
+
+					<button class="btn" type="submit">Sign In</button>
+					<p id="formMessage" class="message" aria-live="polite"></p>
+				</form>
+
+				<p class="footer-text">
+					New here?
+					<a class="link" href="../register/index.html">Create an account</a>
+				</p>
+			</article>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
